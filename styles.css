@@ -38,14 +38,6 @@ header{
 }
 .header-left{display:flex;align-items:center;gap:14px;}
 .header-name{font-family:'Playfair Display',serif;font-weight:500;font-size:16px;}
-.badge{
-  font-size:11px;letter-spacing:.02em;
-  color:var(--accent);
-  border:1px solid var(--accent);
-  border-radius:20px;
-  padding:4px 12px;
-  white-space:nowrap;
-}
 .header-right{display:flex;align-items:center;gap:14px;}
 .header-contacts{display:flex;gap:10px;}
 .icon-btn{
@@ -86,6 +78,7 @@ header{
 }
 .hero h1{margin-bottom:14px;}
 .hero h1 br.mobile-break{display:none;}
+.hero-title-sub{font-size:22px;}
 .hero-sub{
   font-size:15px;font-weight:300;color:var(--text-soft);
   max-width:560px;line-height:1.6;margin-bottom:28px;

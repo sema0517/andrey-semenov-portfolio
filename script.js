@@ -1,9 +1,8 @@
 const DATA = {
-  badge: { ru: "Открыт к предложениям", en: "Open to opportunities" },
   hero: {
     title: {
-      ru: "Senior IT Project Manager:<br>от vision<br class=\"mobile-break\"> AI-продукта до внедрения",
-      en: "Senior IT Project Manager:<br>from AI product vision<br class=\"mobile-break\"> to production"
+      ru: "Senior IT Project Manager<br><span class=\"hero-title-sub\">от vision<br class=\"mobile-break\"> AI-продукта до внедрения</span>",
+      en: "Senior IT Project Manager<br><span class=\"hero-title-sub\">from AI product vision<br class=\"mobile-break\"> to production</span>"
     },
     sub: {
       ru: "11 лет в проектах на стыке бизнеса, SAP и AI — от логистики РУСАЛ до собственных AI-прототипов",
@@ -224,7 +223,6 @@ function render() {
   document.documentElement.lang = currentLang;
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === currentLang));
 
-  document.getElementById('badge').textContent = DATA.badge[currentLang];
   document.getElementById('hero-title').innerHTML = DATA.hero.title[currentLang];
   document.getElementById('hero-sub').textContent = DATA.hero.sub[currentLang];
 

@@ -2,8 +2,8 @@ const DATA = {
   badge: { ru: "Открыт к предложениям", en: "Open to opportunities" },
   hero: {
     title: {
-      ru: "Senior IT Project Manager: от vision AI-продукта до внедрения",
-      en: "Senior IT Project Manager: from AI product vision to production"
+      ru: "Senior IT Project Manager:\nот vision AI-продукта до внедрения",
+      en: "Senior IT Project Manager:\nfrom AI product vision to production"
     },
     sub: {
       ru: "11 лет в проектах на стыке бизнеса, SAP и AI — от логистики РУСАЛ до собственных AI-прототипов",

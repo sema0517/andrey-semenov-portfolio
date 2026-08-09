@@ -68,7 +68,7 @@ header{
   padding:56px 40px 40px;
   max-width:760px;
 }
-.hero h1{margin-bottom:14px;}
+.hero h1{margin-bottom:14px;white-space:pre-line;}
 .hero-sub{
   font-size:15px;font-weight:300;color:var(--text-soft);
   max-width:560px;line-height:1.6;margin-bottom:28px;

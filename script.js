@@ -2,8 +2,8 @@ const DATA = {
   badge: { ru: "Открыт к предложениям", en: "Open to opportunities" },
   hero: {
     title: {
-      ru: "Senior IT Project Manager:\nот vision AI-продукта до внедрения",
-      en: "Senior IT Project Manager:\nfrom AI product vision to production"
+      ru: "Senior IT Project Manager:<br>от vision AI-продукта до внедрения",
+      en: "Senior IT Project Manager:<br>from AI product vision to production"
     },
     sub: {
       ru: "11 лет в проектах на стыке бизнеса, SAP и AI — от логистики РУСАЛ до собственных AI-прототипов",
@@ -211,6 +211,13 @@ const DATA = {
   footer: { ru: "Андрей Семёнов — Senior IT Project Manager", en: "Andrey Semenov — Senior IT Project Manager" }
 };
 
+const CONTACT_INFO = {
+  fullName: "Andrey Semenov",
+  email: "sema0517@gmail.com",
+  phone: "+79636917707",
+  telegramUsername: "semen77a"
+};
+
 let currentLang = 'ru';
 
 function render() {
@@ -218,7 +225,7 @@ function render() {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === currentLang));
 
   document.getElementById('badge').textContent = DATA.badge[currentLang];
-  document.getElementById('hero-title').textContent = DATA.hero.title[currentLang];
+  document.getElementById('hero-title').innerHTML = DATA.hero.title[currentLang];
   document.getElementById('hero-sub').textContent = DATA.hero.sub[currentLang];
 
   document.getElementById('hero-tags').innerHTML = DATA.hero.tags.map(t => `<span class="tag">${t}</span>`).join('');
@@ -281,14 +288,44 @@ function render() {
 
   document.getElementById('contact-title').textContent = DATA.contact.title[currentLang];
   document.getElementById('contact-desc').textContent = DATA.contact.desc[currentLang];
-  document.getElementById('btn-telegram').textContent = DATA.contact.telegram[currentLang];
+  const btnTelegram = document.getElementById('btn-telegram');
+  btnTelegram.textContent = DATA.contact.telegram[currentLang];
+  btnTelegram.href = `https://t.me/${CONTACT_INFO.telegramUsername}`;
+  btnTelegram.target = '_blank';
+  btnTelegram.rel = 'noopener';
   document.getElementById('btn-vcard').textContent = DATA.contact.vcard[currentLang];
   document.getElementById('footer-text').textContent = DATA.footer[currentLang];
 
   attachHandlers();
 }
 
+function downloadVCard() {
+  const vcard = [
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    `FN:${CONTACT_INFO.fullName}`,
+    'N:Semenov;Andrey;;;',
+    `EMAIL:${CONTACT_INFO.email}`,
+    `TEL;TYPE=CELL:${CONTACT_INFO.phone}`,
+    `URL:https://t.me/${CONTACT_INFO.telegramUsername}`,
+    'END:VCARD'
+  ].join('\r\n');
+  const blob = new Blob([vcard], { type: 'text/vcard' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'andrey-semenov.vcf';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 function attachHandlers() {
+  document.getElementById('btn-vcard').onclick = (e) => {
+    e.preventDefault();
+    downloadVCard();
+  };
   document.querySelectorAll('.category-header').forEach(header => {
     header.addEventListener('click', () => {
       const cat = header.closest('.category');

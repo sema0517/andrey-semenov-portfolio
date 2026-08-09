@@ -1,32 +1,33 @@
-# React + TypeScript + Vite
+# Andrey Semenov — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Одностраничный портфолио-сайт: чистый статический HTML/CSS/vanilla JS, без фреймворков и шага сборки. Открывается напрямую (`index.html` в браузере) и деплоится на GitHub Pages как есть.
 
-Currently, two official plugins are available:
+## Структура
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `index.html` — разметка страницы
+- `styles.css` — все стили и CSS-переменные дизайн-системы
+- `script.js` — контент (`DATA`) и вся логика: рендер, переключение языка, expand/collapse
 
-## React Compiler
+## Как редактировать контент
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Все тексты на русском и английском языках живут в объекте `DATA` в начале файла `script.js` — это единственное место, где нужно что-то менять для обновления контента:
 
-## Expanding the Oxlint configuration
+- `DATA.hero` — заголовок, подзаголовок, теги стека, ключевые цифры
+- `DATA.categories` — категории проектов и карточки (задача/решение/роль/результат)
+- `DATA.principles` — секция "Как я работаю"
+- `DATA.skills` — управленческие и технические навыки
+- `DATA.contact` / `DATA.footer` — контактный блок и футер
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Каждое текстовое поле — объект вида `{ ru: "...", en: "..." }`. После изменения `script.js` просто обновите страницу в браузере — сборка не требуется.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Локальный запуск
+
+Откройте `index.html` напрямую в браузере, либо поднимите любой статический сервер, например:
+
+```bash
+python3 -m http.server 8000
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Деплой
+
+Публикация на GitHub Pages настроена через GitHub Actions (`.github/workflows/deploy.yml`): любой push в `main` триггерит деплой актуальной версии сайта.

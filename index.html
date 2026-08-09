@@ -1,14 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Личное портфолио" />
-    <title>Портфолио</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrey Semenov — Senior IT Project Manager</title>
+<meta name="description" content="Senior IT Project Manager: от vision AI-продукта до внедрения. 11 лет в проектах на стыке бизнеса, SAP и AI — от логистики РУСАЛ до собственных AI-прототипов.">
+<meta property="og:title" content="Andrey Semenov — Senior IT Project Manager">
+<meta property="og:description" content="Senior IT Project Manager: от vision AI-продукта до внедрения. 11 лет в проектах на стыке бизнеса, SAP и AI — от логистики РУСАЛ до собственных AI-прототипов.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <span class="header-name">Andrey Semenov</span>
+    <span class="badge" id="badge"></span>
+  </div>
+  <div class="header-right">
+    <div class="header-contacts">
+      <div class="icon-btn" title="Telegram">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 4L3 11l6 2m12-9l-4 17-6-6m10-11L9 13"/></svg>
+      </div>
+      <div class="icon-btn" title="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      </div>
+    </div>
+    <div class="lang-toggle">
+      <div class="lang-btn" data-lang="ru">RU</div>
+      <div class="lang-btn" data-lang="en">EN</div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1 id="hero-title"></h1>
+  <p class="hero-sub" id="hero-sub"></p>
+  <div class="tags" id="hero-tags"></div>
+  <div class="stats" id="hero-stats"></div>
+</section>
+
+<section class="section">
+  <div class="eyebrow" id="label-projects"></div>
+  <div class="marker-line"></div>
+  <div class="categories" id="categories"></div>
+</section>
+
+<section class="section">
+  <div class="eyebrow" id="label-how"></div>
+  <div class="marker-line"></div>
+  <div class="principles" id="principles"></div>
+</section>
+
+<section class="section warm">
+  <div class="eyebrow" id="label-skills"></div>
+  <div class="marker-line"></div>
+  <div class="skills-groups" id="skills-groups"></div>
+</section>
+
+<section class="contact-section">
+  <h2 id="contact-title"></h2>
+  <p id="contact-desc"></p>
+  <div class="contact-buttons">
+    <a class="btn btn-primary" href="#" id="btn-telegram"></a>
+    <a class="btn btn-secondary" href="#" id="btn-vcard"></a>
+  </div>
+</section>
+
+<footer id="footer-text"></footer>
+
+<script src="script.js"></script>
+
+</body>
 </html>

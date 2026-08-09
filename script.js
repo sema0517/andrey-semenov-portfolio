@@ -24,7 +24,7 @@ const DATA = {
   categories: [
     {
       label: "AI Product",
-      count: { ru: "3 проекта", en: "3 projects" },
+      count: { ru: "2 проекта", en: "2 projects" },
       projects: [
         {
           main: true,
@@ -34,15 +34,6 @@ const DATA = {
           solution: { ru: "Построил CJM пользовательского пути сервиса, сформулировал ценность проекта, спроектировал UI-прототип в Claude Design; совместно с коллегой при помощи ИИ собрал рабочий прототип на базе внутренней LLM-платформы. Протестирован и принят бизнесом на моковых данных.", en: "Built a CJM of the service's user journey, defined the project's value, and designed a UI prototype in Claude Design. With a colleague, used AI to assemble a working prototype on the internal LLM platform. Tested and approved by the business on mock data." },
           role: { ru: "Автор vision → руководитель проекта внедрения.", en: "Vision author → implementation project lead." },
           result: { ru: "Ожидаемый эффект $70 000/год за счёт роста скорости согласования и сокращения времени финансирования контракта.", en: "Expected impact of $70,000/year from faster approval and shorter contract financing time." }
-        },
-        {
-          main: false,
-          title: { ru: "AI-ассистент для сбора требований в формате JTBD", en: "JTBD requirements-gathering AI assistant" },
-          teaser: { ru: "Структурированные бизнес-требования сразу в бэклог разработки — без потери контекста", en: "Structured business requirements straight into the dev backlog — no context lost" },
-          task: { ru: "При подготовке проекта контрактного AI-агента требования бизнеса терялись и размывались между обсуждениями и бэклогом разработки.", en: "While preparing the contract AI-agent project, business requirements kept getting lost or diluted between discussions and the dev backlog." },
-          solution: { ru: "Создал AI-ассистента, который переводит запросы бизнеса в структурированный формат Jobs To Be Done и фиксирует их напрямую в бэклоге.", en: "Built an AI assistant that converts business requests into structured Jobs-To-Be-Done format and logs them directly in the backlog." },
-          role: { ru: "Автор инструмента и методологии сбора требований.", en: "Author of the tool and the requirements-gathering methodology." },
-          result: { ru: "Требования фиксируются в бэклоге без потери контекста, discovery-фаза проекта ускорилась.", en: "Requirements are captured in the backlog without losing context; the discovery phase sped up." }
         },
         {
           main: false,
@@ -57,7 +48,7 @@ const DATA = {
     },
     {
       label: "AI Engineering",
-      count: { ru: "1 проект", en: "1 project" },
+      count: { ru: "2 проекта", en: "2 projects" },
       projects: [
         {
           main: true,
@@ -67,6 +58,15 @@ const DATA = {
           solution: { ru: "Настроил 3 AI-ассистентов для консультантов первой линии поддержки, взявших на себя типовые обращения.", en: "Set up 3 AI assistants for first-line support consultants to handle routine requests." },
           role: { ru: "Инициатор и владелец решения.", en: "Initiator and owner of the solution." },
           result: { ru: "Повышена пропускная способность обработки заявок и SLA групп поддержки.", en: "Improved ticket-handling throughput and support team SLA." }
+        },
+        {
+          main: false,
+          title: { ru: "AI-ассистент для сбора требований в формате JTBD", en: "JTBD requirements-gathering AI assistant" },
+          teaser: { ru: "Структурированные бизнес-требования сразу в бэклог разработки — без потери контекста", en: "Structured business requirements straight into the dev backlog — no context lost" },
+          task: { ru: "При подготовке проекта контрактного AI-агента требования бизнеса терялись и размывались между обсуждениями и бэклогом разработки.", en: "While preparing the contract AI-agent project, business requirements kept getting lost or diluted between discussions and the dev backlog." },
+          solution: { ru: "Создал AI-ассистента, который переводит запросы бизнеса в структурированный формат Jobs To Be Done и фиксирует их напрямую в бэклоге.", en: "Built an AI assistant that converts business requests into structured Jobs-To-Be-Done format and logs them directly in the backlog." },
+          role: { ru: "Автор инструмента и методологии сбора требований.", en: "Author of the tool and the requirements-gathering methodology." },
+          result: { ru: "Требования фиксируются в бэклоге без потери контекста, discovery-фаза проекта ускорилась.", en: "Requirements are captured in the backlog without losing context; the discovery phase sped up." }
         }
       ]
     },
